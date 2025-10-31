@@ -1,18 +1,25 @@
 <merge
-xmlns:android="http://schemas.android.com/apk/res/android"
->
+	xmlns:android="http://schemas.android.com/apk/res/android">
 <Button
-android:id="@+id/singlebtn"
-android:layout_weight="1"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:text="@string/singlelog"
+	android:id="@+id/singlebtn"
+	android:layout_weight="1"
+	android:layout_width="0dp"
+	android:layout_height="wrap_content"
+	android:text="@string/singlelog"
+	android:textColor="@color/text_primary"
+	android:textStyle="bold"
+	android:padding="16dp"
+	android:layout_margin="4dp"
 />
 <Button
-android:id="@+id/startstopbtn"
-android:layout_weight="1"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:text="@string/startlog"
+	android:id="@+id/startstopbtn"
+	android:layout_weight="1"
+	android:layout_width="0dp"
+	android:layout_height="wrap_content"
+	android:text="@string/startlog"
+	android:textColor="@color/text_primary"
+	android:textStyle="bold"
+	android:padding="16dp"
+	android:layout_margin="4dp"
 />
 </merge>

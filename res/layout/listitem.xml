@@ -1,34 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" android:orientation="vertical">
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical"
+	android:padding="12dp"
+	android:background="?android:attr/selectableItemBackground">
 <LinearLayout
-	android:layout_width="fill_parent"
-	android:layout_height="wrap_content" android:orientation="horizontal">
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:layout_marginBottom="4dp">
 <TextView
-android:id="@+id/listts"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_marginRight="5sp"
-android:textColor="#b0b0b0"
-android:textSize="16sp"
+	android:id="@+id/listts"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_marginEnd="8dp"
+	android:textColor="@color/list_timestamp"
+	android:textSize="14sp"
+	android:fontFamily="sans-serif-medium"
 />
 <TextView
-android:id="@+id/liststatus"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:layout_weight="1"
-android:textColor="#c0c080"
-android:textSize="16sp"
+	android:id="@+id/liststatus"
+	android:layout_width="0dp"
+	android:layout_height="wrap_content"
+	android:layout_weight="1"
+	android:textColor="@color/list_status"
+	android:textSize="14sp"
+	android:fontFamily="sans-serif"
 />
 </LinearLayout>
 <TextView
-android:id="@+id/listmessage"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:textColor="#30b030"
-android:textSize="17sp"
-android:typeface="monospace"
-android:focusable="false"
+	android:id="@+id/listmessage"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:textColor="@color/list_message"
+	android:textSize="15sp"
+	android:typeface="monospace"
+	android:focusable="false"
+	android:lineSpacingExtra="2dp"
 />
 </LinearLayout>

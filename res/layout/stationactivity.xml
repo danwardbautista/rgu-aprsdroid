@@ -1,63 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-	android:layout_width="fill_parent"
-	android:layout_height="fill_parent"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
 	android:orientation="vertical"
-	xmlns:android="http://schemas.android.com/apk/res/android"
-	>
+	xmlns:android="http://schemas.android.com/apk/res/android">
 	<TextView
-		android:layout_width="fill_parent"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="5dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginStart="12dp"
+		android:layout_marginEnd="12dp"
+		android:layout_marginBottom="4dp"
 		android:text="@string/sta_ssids"
-		/>
-	<ListView android:id="@android:id/list"
-		android:layout_width="fill_parent"
-		android:layout_height="100dp"
+		android:textColor="@color/text_secondary"
+		android:textSize="13sp"
+		android:textStyle="bold"
+	/>
+	<ListView
+		android:id="@android:id/list"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="1"
 		android:descendantFocusability="blocksDescendants"
-		/>
+		android:divider="@color/divider"
+		android:dividerHeight="1dp"
+	/>
 	<TextView
-		android:layout_width="fill_parent"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:layout_marginBottom="5dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginStart="12dp"
+		android:layout_marginEnd="12dp"
+		android:layout_marginBottom="4dp"
 		android:text="@string/sta_history"
-		/>
+		android:textColor="@color/text_secondary"
+		android:textSize="13sp"
+		android:textStyle="bold"
+	/>
 	<ListView
 		android:id="@+id/postlist"
-		android:layout_width="fill_parent"
-		android:layout_height="100sp"
+		android:layout_width="match_parent"
+		android:layout_height="0dp"
 		android:layout_weight="1"
 		android:descendantFocusability="blocksDescendants"
-		/>
+		android:divider="@color/divider"
+		android:dividerHeight="1dp"
+	/>
 	<LinearLayout
-		android:layout_width="fill_parent"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:orientation="horizontal">
+		android:orientation="horizontal"
+		android:padding="8dp"
+		android:elevation="4dp"
+		android:background="@color/background_elevated">
 		<Button
 			android:id="@+id/map"
-			android:layout_width="fill_parent"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:text="@string/sta_map"
-			>
-		</Button>
+			android:textColor="@color/text_primary"
+			android:textStyle="bold"
+			android:layout_margin="4dp"
+		/>
 		<Button
 			android:id="@+id/aprsfi"
-			android:layout_width="fill_parent"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:text="@string/sta_aprsfi"
-			>
-		</Button>
+			android:textColor="@color/text_primary"
+			android:textStyle="bold"
+			android:layout_margin="4dp"
+		/>
 		<Button
 			android:id="@+id/qrzcom"
-			android:layout_width="fill_parent"
+			android:layout_width="0dp"
 			android:layout_height="wrap_content"
 			android:layout_weight="1"
 			android:text="@string/sta_qrzcom"
-			>
-		</Button>
+			android:textColor="@color/text_primary"
+			android:textStyle="bold"
+			android:layout_margin="4dp"
+		/>
 	</LinearLayout>
 </LinearLayout>
 

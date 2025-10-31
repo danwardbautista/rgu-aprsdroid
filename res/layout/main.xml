@@ -1,31 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-android:id="@+id/mainlayout"
-android:layout_width="fill_parent"
-android:layout_height="fill_parent"
-android:orientation="vertical"
-xmlns:android="http://schemas.android.com/apk/res/android"
->
+	android:id="@+id/mainlayout"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	xmlns:android="http://schemas.android.com/apk/res/android">
 <ListView
 	android:id="@android:id/list"
-	android:layout_width="fill_parent"
-	android:layout_height="100sp"
+	android:layout_width="match_parent"
+	android:layout_height="0dp"
 	android:layout_weight="1"
 	android:focusable="true"
 	android:focusableInTouchMode="true"
 	android:descendantFocusability="blocksDescendants"
-	/>
-<TextView android:id="@android:id/empty"
-	android:layout_width="fill_parent" 
-	android:layout_height="100sp"
+	android:divider="@color/divider"
+	android:dividerHeight="1dp"
+	android:clipToPadding="false"
+	android:paddingTop="4dp"
+	android:paddingBottom="4dp"
+/>
+<TextView
+	android:id="@android:id/empty"
+	android:layout_width="match_parent"
+	android:layout_height="0dp"
 	android:layout_weight="1"
-	android:textSize="18sp"
-	android:text="@string/empty_logview"/>
+	android:textSize="16sp"
+	android:textColor="@color/text_secondary"
+	android:gravity="center"
+	android:padding="24dp"
+	android:text="@string/empty_logview"
+/>
 <LinearLayout
-android:id="@+id/buttonlayout"
-android:layout_width="fill_parent"
-android:layout_height="wrap_content"
-android:orientation="horizontal">
+	android:id="@+id/buttonlayout"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content"
+	android:orientation="horizontal"
+	android:elevation="4dp"
+	android:background="@color/background_elevated">
 <include layout="@layout/buttons" />
 </LinearLayout>
 </LinearLayout>
