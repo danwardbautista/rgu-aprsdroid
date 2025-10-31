@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Modern popup menu background with shadow -->
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Shadow layer -->
+    <!-- Shadow -->
     <item>
         <shape android:shape="rectangle">
-            <solid android:color="#18000000"/>
+            <solid android:color="#30000000"/>
             <corners android:radius="8dp"/>
         </shape>
     </item>
-    <!-- Card layer with offset for shadow effect -->
+    <!-- Popup surface -->
     <item
-        android:top="1dp"
+        android:top="2dp"
         android:bottom="4dp"
         android:left="2dp"
         android:right="2dp">

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern profile/import icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M9,16 L9,10 L5,10 L12,3 L19,10 L15,10 L15,16 L9,16 Z M5,18 L19,18 L19,20 L5,20 L5,18 Z"/>
+</vector>

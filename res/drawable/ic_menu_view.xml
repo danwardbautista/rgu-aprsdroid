@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern layers/view icon for overlays -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11.99,18.54 L4.62,13.97 L3,15.03 L11.99,20.5 L21,15.03 L19.38,13.97 L11.99,18.54 Z M11.99,16 L19.36,11.43 L21,10.37 L11.99,4.89 L3,10.37 L4.62,11.43 L11.99,16 Z"/>
+</vector>

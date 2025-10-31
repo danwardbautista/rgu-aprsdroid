@@ -13,6 +13,12 @@
 
         <!-- Action Bar -->
         <item name="android:actionBarStyle">@style/CustomActionBar</item>
+        <item name="android:actionDropDownStyle">@style/CustomDropDownNav</item>
+        <item name="android:actionOverflowButtonStyle">@style/CustomOverflow</item>
+
+        <!-- Popup and Dropdown Menus -->
+        <item name="android:popupMenuStyle">@style/CustomPopupMenu</item>
+        <item name="android:dropDownListViewStyle">@style/CustomDropDownListView</item>
 
         <!-- UI Elements -->
         <item name="android:buttonStyle">@style/CustomButton</item>
@@ -23,15 +29,17 @@
     <style name="CustomActionBar" parent="@android:style/Widget.Holo.ActionBar">
         <item name="android:background">@color/primary</item>
         <item name="android:titleTextStyle">@style/ActionBarTitleText</item>
+        <item name="android:height">64dp</item>
     </style>
 
     <style name="ActionBarTitleText" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
-        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">20sp</item>
     </style>
 
     <style name="CustomButton" parent="@android:style/Widget.Holo.Button">
         <item name="android:background">@drawable/button_primary</item>
-        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textColor">#FFFFFF</item>
         <item name="android:textStyle">bold</item>
         <item name="android:minHeight">48dp</item>
         <item name="android:paddingStart">16dp</item>
@@ -56,6 +64,25 @@
 
     <style name="Map.ActionBar" parent="@android:style/Widget.Holo.Light.ActionBar.Solid.Inverse">
         <item name="android:background">#a0000000</item>
+    </style>
+
+    <!-- Modern Popup/Dropdown Menu Styles -->
+    <style name="CustomPopupMenu" parent="@android:style/Widget.Holo.PopupMenu">
+        <item name="android:popupBackground">@drawable/popup_background</item>
+    </style>
+
+    <style name="CustomDropDownListView" parent="@android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@color/ripple</item>
+        <item name="android:divider">@color/divider</item>
+        <item name="android:dividerHeight">1dp</item>
+    </style>
+
+    <style name="CustomDropDownNav" parent="@android:style/Widget.Holo.Spinner">
+        <item name="android:background">@drawable/popup_background</item>
+    </style>
+
+    <style name="CustomOverflow" parent="@android:style/Widget.Holo.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_menu_more</item>
     </style>
 </resources>
 
