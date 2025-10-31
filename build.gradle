@@ -129,8 +129,6 @@ android {
 		main {
 			manifest.srcFile 'AndroidManifest.xml'
 			java.srcDirs = ['src', 'PacketDroid/src']
-			// Exclude PacketDroidActivity - it's a test activity for PacketDroid, not needed for APRSdroid
-			java.exclude 'com/jazzido/PacketDroid/PacketDroidActivity.java'
 			// some gradle-android-scala-plugin versions don't know scala.* properties
 			// if it breaks, just remove the following two lines:
 			//scala.srcDirs = ['src']
