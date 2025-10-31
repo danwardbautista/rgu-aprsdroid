@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern APRS status notification icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Radio tower base -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M10,18 L14,18 L13,22 L11,22 Z"/>
+
+    <!-- Tower structure -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11,10 L13,10 L13,18 L11,18 Z"/>
+
+    <!-- Antenna top -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,7 L11,10 L13,10 Z"/>
+
+    <!-- Left signal wave (inner) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8.5,12 C8.5,10.62 9.5,9.5 10.8,9.2 L11,10.2 C10.1,10.4 9.5,11.1 9.5,12 C9.5,12.9 10.1,13.6 11,13.8 L10.8,14.8 C9.5,14.5 8.5,13.38 8.5,12 Z"/>
+
+    <!-- Left signal wave (outer) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M6,12 C6,9.24 8.02,6.96 10.7,6.6 L10.9,7.6 C8.62,7.92 7,9.78 7,12 C7,14.22 8.62,16.08 10.9,16.4 L10.7,17.4 C8.02,17.04 6,14.76 6,12 Z"/>
+
+    <!-- Right signal wave (inner) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M15.5,12 C15.5,10.62 14.5,9.5 13.2,9.2 L13,10.2 C13.9,10.4 14.5,11.1 14.5,12 C14.5,12.9 13.9,13.6 13,13.8 L13.2,14.8 C14.5,14.5 15.5,13.38 15.5,12 Z"/>
+
+    <!-- Right signal wave (outer) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M18,12 C18,9.24 15.98,6.96 13.3,6.6 L13.1,7.6 C15.38,7.92 17,9.78 17,12 C17,14.22 15.38,16.08 13.1,16.4 L13.3,17.4 C15.98,17.04 18,14.76 18,12 Z"/>
+</vector>

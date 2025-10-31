@@ -1,45 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Brand Colors -->
-    <color name="primary">#1976D2</color>
-    <color name="primary_dark">#0D47A1</color>
-    <color name="primary_light">#BBDEFB</color>
-    <color name="accent">#FF9800</color>
+    <!-- Primary Brand Colors - Custom Palette -->
+    <color name="primary">#1D546C</color>                  <!-- Teal Blue - Main brand color -->
+    <color name="primary_dark">#0C2B4E</color>             <!-- Dark Navy - Status bar, app bar -->
+    <color name="primary_medium">#1A3D64</color>           <!-- Medium Navy - Secondary elements -->
+    <color name="primary_light">#4A7C8C</color>            <!-- Light Teal - Hover states, lighter accents -->
+    <color name="accent">#FF8A65</color>                   <!-- Coral - Accent for CTAs and highlights -->
 
-    <!-- Background Colors -->
-    <color name="background_dark">#121212</color>
-    <color name="background_card">#1E1E1E</color>
-    <color name="background_elevated">#2C2C2C</color>
+    <!-- Background Colors - MODERN LIGHT THEME -->
+    <color name="background_dark">#F4F4F4</color>          <!-- Light Gray - Main background -->
+    <color name="background_card">#FFFFFF</color>          <!-- White - Card backgrounds -->
+    <color name="background_elevated">#FFFFFF</color>      <!-- White - Elevated surfaces -->
 
-    <!-- Text Colors -->
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B0B0B0</color>
-    <color name="text_tertiary">#808080</color>
-    <color name="text_hint">#606060</color>
+    <!-- Text Colors - Navy-based palette -->
+    <color name="text_primary">#0C2B4E</color>             <!-- Dark Navy - Primary text -->
+    <color name="text_secondary">#1A3D64</color>           <!-- Medium Navy - Secondary text -->
+    <color name="text_tertiary">#6B8490</color>            <!-- Gray-Blue - Tertiary text -->
+    <color name="text_hint">#B0BEC5</color>                <!-- Light Gray-Blue - Hint text -->
 
     <!-- Status Colors -->
-    <color name="status_success">#4CAF50</color>
-    <color name="status_warning">#FFC107</color>
-    <color name="status_error">#F44336</color>
-    <color name="status_info">#2196F3</color>
+    <color name="status_success">#66BB6A</color>           <!-- Green - Success states -->
+    <color name="status_warning">#FFA726</color>           <!-- Amber - Warning states -->
+    <color name="status_error">#EF5350</color>             <!-- Red - Error states -->
+    <color name="status_info">#1D546C</color>              <!-- Teal - Info states (brand color) -->
 
     <!-- APRS-Specific Colors -->
-    <color name="aprs_message">#66BB6A</color>
-    <color name="aprs_position">#42A5F5</color>
-    <color name="aprs_status">#FFA726</color>
-    <color name="aprs_timestamp">#9E9E9E</color>
+    <color name="aprs_message">#66BB6A</color>             <!-- Green - Messages -->
+    <color name="aprs_position">#1D546C</color>            <!-- Teal - Position updates -->
+    <color name="aprs_status">#FFA726</color>              <!-- Amber - Status updates -->
+    <color name="aprs_timestamp">#6B8490</color>           <!-- Gray-Blue - Timestamps -->
 
     <!-- List Item Colors -->
-    <color name="list_timestamp">#B0B0B0</color>
-    <color name="list_status">#FFC864</color>
-    <color name="list_message">#4CAF50</color>
+    <color name="list_timestamp">#6B8490</color>           <!-- Gray-Blue - Timestamps -->
+    <color name="list_status">#FFA726</color>              <!-- Amber - Status -->
+    <color name="list_message">#66BB6A</color>             <!-- Green - Messages -->
 
     <!-- Dividers and Borders -->
-    <color name="divider">#333333</color>
-    <color name="border_light">#404040</color>
+    <color name="divider">#D9E3E8</color>                  <!-- Light Blue-Gray - Dividers -->
+    <color name="border_light">#D9E3E8</color>             <!-- Light Blue-Gray - Borders -->
 
     <!-- Interactive Elements -->
-    <color name="ripple">#40FFFFFF</color>
-    <color name="button_disabled">#404040</color>
-    <color name="button_text_disabled">#606060</color>
+    <color name="ripple">#401D546C</color>                 <!-- Teal at 25% opacity - Ripple effect -->
+    <color name="button_disabled">#E0E0E0</color>          <!-- Gray - Disabled buttons -->
+    <color name="button_text_disabled">#B0BEC5</color>     <!-- Light Gray-Blue - Disabled text -->
 </resources>

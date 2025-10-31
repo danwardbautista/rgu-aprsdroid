@@ -51,8 +51,9 @@
 	android:layout_height="48dp"
 	android:text="@android:string/ok"
 	android:enabled="false"
-	android:textColor="@color/text_primary"
+	android:textColor="@android:color/white"
 	android:textStyle="bold"
+	android:background="@drawable/button_raised"
 />
 </LinearLayout>
 </LinearLayout>

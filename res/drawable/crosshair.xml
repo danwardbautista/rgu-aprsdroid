@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Modern crosshair icon for map positioning -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="48"
+    android:viewportHeight="48">
+
+    <!-- Outer circle -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2.5"
+        android:fillColor="#00000000"
+        android:pathData="M24,24 m-18,0 a18,18 0,1,1 36,0 a18,18 0,1,1 -36,0"/>
+
+    <!-- Inner circle -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M24,24 m-4,0 a4,4 0,1,1 8,0 a4,4 0,1,1 -8,0"/>
+
+    <!-- Center dot -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M24,24 m-2,0 a2,2 0,1,1 4,0 a2,2 0,1,1 -4,0"/>
+
+    <!-- Top line -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M24,4 L24,14"/>
+
+    <!-- Bottom line -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M24,34 L24,44"/>
+
+    <!-- Left line -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M4,24 L14,24"/>
+
+    <!-- Right line -->
+    <path
+        android:strokeColor="#1D546C"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:pathData="M34,24 L44,24"/>
+</vector>

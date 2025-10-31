@@ -6,10 +6,11 @@
 	android:layout_width="0dp"
 	android:layout_height="wrap_content"
 	android:text="@string/singlelog"
-	android:textColor="@color/text_primary"
+	android:textColor="@android:color/white"
 	android:textStyle="bold"
 	android:padding="16dp"
-	android:layout_margin="4dp"
+	android:layout_margin="8dp"
+	android:background="@drawable/button_raised"
 />
 <Button
 	android:id="@+id/startstopbtn"
@@ -17,9 +18,10 @@
 	android:layout_width="0dp"
 	android:layout_height="wrap_content"
 	android:text="@string/startlog"
-	android:textColor="@color/text_primary"
+	android:textColor="@android:color/white"
 	android:textStyle="bold"
 	android:padding="16dp"
-	android:layout_margin="4dp"
+	android:layout_margin="8dp"
+	android:background="@drawable/button_raised"
 />
 </merge>
