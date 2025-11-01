@@ -6,9 +6,9 @@
 	android:padding="12dp"
 	android:layout_marginStart="8dp"
 	android:layout_marginEnd="8dp"
-	android:layout_marginTop="4dp"
-	android:layout_marginBottom="4dp"
-	android:background="@drawable/card_background">
+	android:layout_marginTop="2dp"
+	android:layout_marginBottom="6dp"
+	android:background="@color/background_station">
 	<LinearLayout
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -64,6 +64,13 @@
 		android:typeface="monospace"
 		android:focusable="false"
 		android:lineSpacingExtra="2dp"
+	/>
+	<!-- Subtle bottom border -->
+	<View
+		android:layout_width="match_parent"
+		android:layout_height="1dp"
+		android:layout_marginTop="8dp"
+		android:background="#333333"
 	/>
 </LinearLayout>
 

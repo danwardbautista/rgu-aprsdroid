@@ -71,15 +71,26 @@ class StationListAdapter(context : Context, prefs : PrefsWrapper,
 		val dist = Array[Float](0, 0)
 
 		if (call == mycall) {
-			view.setBackgroundColor(0x4020ff20)
+			view.setBackgroundColor(0x6020ff20)  // Slightly more opaque green for own station
+			// Set text to black for own station
+			val blackColor = 0xFF000000
+			distage.setTextColor(blackColor)
+			view.findViewById(R.id.station_call).asInstanceOf[TextView].setTextColor(blackColor)
+			view.findViewById(R.id.station_qrg).asInstanceOf[TextView].setTextColor(blackColor)
 		} else if (call == targetcall) {
-			view.setBackgroundColor(0x402020ff)
-		} else
-			view.setBackgroundColor(0)
-		val color = getAgeColor(ts)
-		distage.setTextColor(color)
-		view.findViewById(R.id.station_call).asInstanceOf[TextView].setTextColor(color)
-		view.findViewById(R.id.station_qrg).asInstanceOf[TextView].setTextColor(color)
+			view.setBackgroundColor(0x602020ff)  // Slightly more opaque blue for target station
+			// Set text to black for target station as well
+			val blackColor = 0xFF000000
+			distage.setTextColor(blackColor)
+			view.findViewById(R.id.station_call).asInstanceOf[TextView].setTextColor(blackColor)
+			view.findViewById(R.id.station_qrg).asInstanceOf[TextView].setTextColor(blackColor)
+		} else {
+			// Regular stations get age-based text colors
+			val color = getAgeColor(ts)
+			distage.setTextColor(color)
+			view.findViewById(R.id.station_call).asInstanceOf[TextView].setTextColor(color)
+			view.findViewById(R.id.station_qrg).asInstanceOf[TextView].setTextColor(color)
+		}
 		val qrg_visible = if (qrg != null && qrg != "") View.VISIBLE else View.GONE
 		view.findViewById(R.id.station_qrg).asInstanceOf[View].setVisibility(qrg_visible)
 		val MCD = 1000000.0

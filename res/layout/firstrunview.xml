@@ -5,7 +5,9 @@
 	<LinearLayout
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:orientation="vertical" >
+		android:orientation="vertical"
+		android:background="@color/background_card"
+		android:padding="16dp" >
 		<TextView
 			android:id="@+id/fr_text"
 			android:layout_width="fill_parent"
@@ -15,6 +17,8 @@
 			android:layout_marginBottom="5sp"
 			android:layout_marginRight="10sp"
 			android:autoLink="web"
+			android:textColor="@color/text_secondary"
+			android:textColorLink="@color/primary"
 			android:text="@string/fr_text"
 			/>
 		<TextView
@@ -26,6 +30,8 @@
 			android:layout_marginBottom="5sp"
 			android:layout_marginRight="10sp"
 			android:autoLink="web"
+			android:textColor="@color/text_secondary"
+			android:textColorLink="@color/primary"
 			android:text="@string/fr_text2"
 			/>
 		<EditText
@@ -51,6 +57,8 @@
 			android:layout_marginBottom="5sp"
 			android:layout_marginRight="10sp"
 			android:autoLink="web"
+			android:textColor="@color/text_secondary"
+			android:textColorLink="@color/primary"
 			android:text="@string/fr_text3"
 			/>
 		<EditText
