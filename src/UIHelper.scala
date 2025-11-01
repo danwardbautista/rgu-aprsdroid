@@ -330,9 +330,10 @@ trait UIHelper extends Activity
 			onStartLoading()
 			new StorageCleaner(StorageDatabase.open(this)).execute()
 			true
-		case R.id.about =>
-			aboutDialog()
-			true
+		// About menu item temporarily hidden - keeping handler code for easy re-enable
+		// case R.id.about =>
+		//	aboutDialog()
+		//	true
 		case R.id.age =>
 			ageDialog()
 			true

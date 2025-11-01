@@ -39,8 +39,8 @@ class StationListAdapter(context : Context, prefs : PrefsWrapper,
 
 	context.registerReceiver(locReceiver, new IntentFilter(AprsService.UPDATE))
 
-	private val DARK = Array(0xff, 0x80, 0x80, 0x50)
-	private val BRIGHT = Array(0xff, 0xff, 0xff, 0xe8)
+	private val DARK = Array(0xcc, 0x40, 0x40, 0x20)
+	private val BRIGHT = Array(0xdd, 0xaa, 0xaa, 0x99)
 	private val MAX = 30*60*1000
 	def getAgeColor(ts : Long) : Int = {
 		val delta = System.currentTimeMillis - ts
@@ -61,13 +61,13 @@ class StationListAdapter(context : Context, prefs : PrefsWrapper,
 
 		// TODO: multidimensional mapping
 		val distage = view.findViewById(R.id.station_distage).asInstanceOf[TextView]
-		val call = cursor.getString(COLUMN_CALL)
+		val call = Option(cursor.getString(COLUMN_CALL)).getOrElse("")
 		val ts = cursor.getLong(COLUMN_TS)
 		val age = DateUtils.getRelativeTimeSpanString(context, ts)
 		val lat = cursor.getInt(COLUMN_LAT)
 		val lon = cursor.getInt(COLUMN_LON)
-		val qrg = cursor.getString(COLUMN_QRG)
-		val symbol = cursor.getString(COLUMN_SYMBOL)
+		val qrg = Option(cursor.getString(COLUMN_QRG)).getOrElse("")
+		val symbol = Option(cursor.getString(COLUMN_SYMBOL)).getOrElse("")
 		val dist = Array[Float](0, 0)
 
 		if (call == mycall) {
@@ -93,10 +93,22 @@ class StationListAdapter(context : Context, prefs : PrefsWrapper,
 		}
 		val qrg_visible = if (qrg != null && qrg != "") View.VISIBLE else View.GONE
 		view.findViewById(R.id.station_qrg).asInstanceOf[View].setVisibility(qrg_visible)
-		val MCD = 1000000.0
-		android.location.Location.distanceBetween(my_lat/MCD, my_lon/MCD,
-			lat/MCD, lon/MCD, dist)
-		distage.setText("%1.1f km %s\n%s".format(dist(0)/1000.0, getBearing(dist(1)), age))
+
+		// Calculate distance safely - only if we have valid coordinates
+		if (my_lat != 0 && my_lon != 0 && lat != 0 && lon != 0) {
+			try {
+				val MCD = 1000000.0
+				android.location.Location.distanceBetween(my_lat/MCD, my_lon/MCD,
+					lat/MCD, lon/MCD, dist)
+				distage.setText("%1.1f km %s\n%s".format(dist(0)/1000.0, getBearing(dist(1)), age))
+			} catch {
+				case e: Exception =>
+					Log.d("StationListAdapter", "Distance calculation failed for " + call, e)
+					distage.setText("%s\n%s".format("Unknown", age))
+			}
+		} else {
+			distage.setText("%s\n%s".format("Unknown", age))
+		}
 		view.findViewById(R.id.station_symbol).asInstanceOf[SymbolView].setSymbol(symbol)
 		super.bindView(view, context, cursor)
 	}

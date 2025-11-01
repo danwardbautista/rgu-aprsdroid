@@ -9,7 +9,7 @@ import _root_.android.text.{ClipboardManager, Editable, TextWatcher}
 import _root_.android.util.Log
 import _root_.android.view.{ContextMenu, KeyEvent, Menu, MenuItem, View, Window}
 import _root_.android.view.View.{OnClickListener, OnKeyListener}
-import _root_.android.widget.{Button, EditText, ListView, Toast}
+import _root_.android.widget.{Button, EditText, ImageButton, ListView, Toast}
 import _root_.android.widget.AdapterView.AdapterContextMenuInfo
 
 class MessageActivity extends StationHelper(R.string.app_messages)
@@ -22,7 +22,7 @@ class MessageActivity extends StationHelper(R.string.app_messages)
 	lazy val pla = new MessageListAdapter(this, prefs, mycall, targetcall)
 
 	lazy val msginput = findView[EditText](R.id.msginput)
-	lazy val msgsend = findView[Button](R.id.msgsend)
+	lazy val msgsend = findView[ImageButton](R.id.msgsend)
 
 	override def onCreate(savedInstanceState: Bundle) {
 		super.onCreate(savedInstanceState)

@@ -9,7 +9,7 @@ import _root_.android.text.InputFilter
 import _root_.android.util.Log
 import _root_.android.view.{ContextMenu, LayoutInflater, Menu, MenuItem, View}
 import _root_.android.view.View.OnClickListener
-import _root_.android.widget.{Button, EditText, ListView}
+import _root_.android.widget.{Button, EditText, ImageButton, ListView}
 
 class ConversationsActivity extends LoadingListActivity
 		with OnClickListener {
@@ -20,7 +20,7 @@ class ConversationsActivity extends LoadingListActivity
 	lazy val mycall = prefs.getCallSsid()
 	lazy val pla = new ConversationListAdapter(this, prefs)
 
-	lazy val newConversationBtn = findViewById(R.id.new_conversation).asInstanceOf[Button]
+	lazy val newConversationBtn = findViewById(R.id.new_conversation).asInstanceOf[ImageButton]
 
 	override def onCreate(savedInstanceState: Bundle) {
 		super.onCreate(savedInstanceState)
@@ -70,8 +70,11 @@ class ConversationsActivity extends LoadingListActivity
 					override def onClick(d : DialogInterface, which : Int) {
 						which match {
 							case DialogInterface.BUTTON_POSITIVE =>
-							openMessageSend(nm_call.getText().toString(),
+							val call = nm_call.getText().toString()
+							if (call != null && call.trim() != "") {
+								openMessageSend(call,
 									nm_text.getText().toString())
+							}
 							case _ =>
 							finish()
 						}

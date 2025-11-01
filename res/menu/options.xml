@@ -20,10 +20,13 @@
 		android:title="@string/preferences"
 		android:alphabeticShortcut="p"
 		android:icon="@drawable/ic_menu_preferences" />
+	<!-- About menu item temporarily hidden - can be re-enabled by uncommenting below block -->
+	<!--
 	<item android:id="@+id/about"
 		android:title="@string/about"
 		android:alphabeticShortcut="a"
 		android:icon="@drawable/ic_menu_info_details" />
+	-->
 </group>
 </menu>
 

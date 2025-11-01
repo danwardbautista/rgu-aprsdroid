@@ -2,9 +2,9 @@
 <ProgressBar
 	android:id="@+id/loading"
 	style="@android:style/Widget.ProgressBar.Large.Inverse"
-	android:layout_width="76dip"
-	android:layout_height="76dip"
-	android:layout_margin="30dip"
+	android:layout_width="56dip"
+	android:layout_height="56dip"
+	android:layout_margin="8dp"
 	android:gravity="right|top"
 	android:indeterminate="true"
 	/>
@@ -22,7 +22,7 @@
 	android:layout_width="fill_parent"
 	android:layout_height="wrap_content"
 	android:layout_gravity="bottom|start|left"
-	android:layout_margin="30dip"
+	android:layout_margin="8dp"
 	android:orientation="vertical" >
 
 	<TextView
@@ -30,12 +30,17 @@
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text=""
-		android:textSize="24sp" />
+		android:textSize="18sp" />
 	<Button
 		android:id="@+id/accept"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
+		android:layout_margin="8dp"
+		android:padding="16dp"
 		android:text="ok"
+		android:background="@drawable/button_raised"
+		android:textColor="@android:color/white"
+		android:textStyle="bold"
 		/>
 </LinearLayout>
 </merge>

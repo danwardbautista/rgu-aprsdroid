@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
-    <!-- Vertical bar of plus -->
-    <item
-        android:top="6dp"
-        android:bottom="6dp"
-        android:left="10dp"
-        android:right="10dp">
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white"/>
-        </shape>
-    </item>
-    <!-- Horizontal bar of plus -->
-    <item
-        android:top="10dp"
-        android:bottom="10dp"
-        android:left="6dp"
-        android:right="6dp">
-        <shape android:shape="rectangle">
-            <solid android:color="@android:color/white"/>
-        </shape>
-    </item>
-</layer-list>
+<!-- Modern add/plus icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="28dp"
+    android:height="28dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+</vector>

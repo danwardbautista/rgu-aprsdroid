@@ -4,7 +4,10 @@ import _root_.android.content.res.Configuration
 import _root_.android.view.{Menu, MenuItem}
 
 class StationHelper(title_id : Int) extends LoadingListActivity {
-	lazy val targetcall = getIntent().getDataString()
+	lazy val targetcall = {
+		val call = getIntent().getDataString()
+		if (call == null) "" else call
+	}
 
 	override def onResume() = {
 		super.onResume()

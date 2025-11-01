@@ -35,9 +35,30 @@ class HubActivity extends MainListActivity("hub", R.id.hub) {
 
 	override def onListItemClick(l : ListView, v : View, position : Int, id : Long) {
 		//super.onListItemClick(l, v, position, id)
-		val c = getListView().getItemAtPosition(position).asInstanceOf[Cursor]
-		val call = c.getString(StorageDatabase.Station.COLUMN_CALL)
-		openDetails(call)
+		try {
+			val item = getListView().getItemAtPosition(position)
+			if (item == null) {
+				Log.d(TAG, "Null item clicked at position: " + position)
+				return
+			}
+
+			val c = item.asInstanceOf[Cursor]
+			if (c == null || c.isAfterLast() || c.isBeforeFirst()) {
+				Log.d(TAG, "Invalid cursor at position: " + position)
+				return
+			}
+
+			val call = c.getString(StorageDatabase.Station.COLUMN_CALL)
+			if (call == null || call.trim().isEmpty()) {
+				Log.d(TAG, "Null or empty callsign at position: " + position)
+				return
+			}
+
+			openDetails(call)
+		} catch {
+			case e: Exception =>
+				Log.e(TAG, "Error in onListItemClick", e)
+		}
 	}
 
 }

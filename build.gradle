@@ -81,7 +81,7 @@ android {
 	compileSdkVersion 33
 	buildToolsVersion "33.0.2"
 	defaultConfig {
-		minSdkVersion 14
+		minSdkVersion 21
 		targetSdkVersion 33
 		versionName "$build_revision"
 		versionCode versionCodeDate()
@@ -101,8 +101,8 @@ android {
 
 	buildTypes {
 		debug {
-			minifyEnabled true
-			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard.cfg'
+			minifyEnabled false
+			debuggable true
 		}
 		release {
 			minifyEnabled true
